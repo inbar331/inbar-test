@@ -2,5 +2,11 @@
   "name": "my-new-project",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "scripts": {
+    "start": "node index.js",
+    "stop": "lsof -i :3000 | grep node | awk '{print $2}' | xargs kill -9"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
